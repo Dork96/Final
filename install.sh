@@ -13,13 +13,13 @@ echo "Please be patient..."
 
 apt-get update --allow-releaseinfo-change > /dev/null
 
-sudo apt-get update > /dev/null && apt-get upgrade > /dev/null
+apt-get update > /dev/null && apt-get upgrade > /dev/null
 #install figlet & lolcat
 clear
 echo "Installation Accessories"
-sudo apt-get install figlet > /dev/null
-sudo apt-get install ruby > /dev/null
-sudo gem install lolcat > /dev/null
+apt-get install figlet > /dev/null
+apt-get install ruby > /dev/null
+gem install lolcat > /dev/null
 
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
