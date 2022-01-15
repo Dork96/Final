@@ -7,41 +7,41 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-sudo apt-get update && apt-get upgrade
+sudo apt-get update && apt-get upgrade > /dev/null
 #install figlet & lolcat
-sudo apt-get install figlet
-sudo apt-get install ruby
-sudo gem install lolcat
+sudo apt-get install figlet > /dev/null
+sudo apt-get install ruby > /dev/null
+sudo gem install lolcat > /dev/null
 
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 #install ssh ovpn
-wget https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh > /dev/null
 #install ohp-server
-wget https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null
 #sstp
-wget https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh > /dev/null
 #install ssr
-wget https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh > /dev/null
 #sodosok
-wget https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh > /dev/null
 #installwg
-wget https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh > /dev/null
 #install L2TP
-wget https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh > /dev/null
 #install v2ray
-wget https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
-wget https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null
+wget https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh > /dev/null
 #br-set
-wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null
 
 # Set Index
 cd /home/vps/public_html
 wget https://raw.githubusercontent.com/Dork96/Final/main/index.html
 # Encrypt
 cd
-wget https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh
+wget https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh > /dev/null
 
 rm -f /root/encrypt.sh
 rm -f /root/ssh-vpn.sh
