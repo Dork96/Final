@@ -6,7 +6,10 @@ fi
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
-fi
+fi 
+
+echo "Process Install Script..."
+echo "Please be patient..."
 sudo apt-get update && apt-get upgrade > /dev/null
 #install figlet & lolcat
 sudo apt-get install figlet > /dev/null
