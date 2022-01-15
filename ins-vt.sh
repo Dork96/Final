@@ -1,10 +1,10 @@
 #!/bin/bash
 domain=$(cat /root/domain)
-apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
-apt install socat cron bash-completion ntpdate -y
+apt-get install iptables iptables-persistent -y
+apt-get install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt-get install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
-apt -y install chrony
+apt-get -y install chrony
 timedatectl set-ntp true
 systemctl enable chronyd && systemctl restart chronyd
 systemctl enable chrony && systemctl restart chrony
@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/Dork96/Final/main/go.sh && chmod +x go.sh && ./go.sh
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/Dork96/Final/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/Dork96/Final/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/Dork96/Final/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/Dork96/Final/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/Dork96/Finalo/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/Dork96/Final/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/Dork96/Final/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/Dork96/Final/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/Dork96/Final/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/Dork96/Final/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/Dork96/Final/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/Dork96/Final/main/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/Dork96/Final/main/cert.sh"
+wget -q -O add-ws "https://raw.githubusercontent.com/Dork96/Final/main/add-ws.sh"
+wget -q -O add-vless "https://raw.githubusercontent.com/Dork96/Final/main/add-vless.sh"
+wget -q -O add-tr "https://raw.githubusercontent.com/Dork96/Final/main/add-tr.sh"
+wget -q -O del-ws "https://raw.githubusercontent.com/Dork96/Final/main/del-ws.sh"
+wget -q -O del-vless "https://raw.githubusercontent.com/Dork96/Finalo/main/del-vless.sh"
+wget -q -O del-tr "https://raw.githubusercontent.com/Dork96/Final/main/del-tr.sh"
+wget -q -O cek-ws "https://raw.githubusercontent.com/Dork96/Final/main/cek-ws.sh"
+wget -q -O cek-vless "https://raw.githubusercontent.com/Dork96/Final/main/cek-vless.sh"
+wget -q -O cek-tr "https://raw.githubusercontent.com/Dork96/Final/main/cek-tr.sh"
+wget -q -O renew-ws "https://raw.githubusercontent.com/Dork96/Final/main/renew-ws.sh"
+wget -q -O renew-vless "https://raw.githubusercontent.com/Dork96/Final/main/renew-vless.sh"
+wget -q -O renew-tr "https://raw.githubusercontent.com/Dork96/Final/main/renew-tr.sh"
+wget -q -O certv2ray "https://raw.githubusercontent.com/Dork96/Final/main/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr
@@ -519,5 +519,5 @@ chmod +x renew-tr
 chmod +x certv2ray
 cd
 rm -f ins-vt.sh
-echo -e "Instaled V2RAY Succes..."
+echo -e "Instaled V2RAY Succes..." | lolcat
 
