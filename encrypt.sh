@@ -168,7 +168,7 @@ mv xp.x xp
 #Remove Extension
 rm -f *.x.c
 clear
-echo -e "Encrypt Shell Susuccessful..."
+echo -e "Installation Script Susuccessful..."
 rm -f encrypt
 cd
 rm -rf shc-4.0.2
