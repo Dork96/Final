@@ -68,4 +68,3 @@ wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/iDork96/Final/main/c
 wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/Dork96/Final/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
 rm -f /root/sstp.sh
 echo -e "Instaled SSTP Succes..."
-
