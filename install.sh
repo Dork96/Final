@@ -13,8 +13,9 @@ echo "Please be patient..."
 
 apt-get update --allow-releaseinfo-change > /dev/null
 
-sudo apt-get update && apt-get upgrade > /dev/null
+sudo apt-get update > /dev/null && apt-get upgrade > /dev/null
 #install figlet & lolcat
+clear
 echo "Installation Accessories"
 sudo apt-get install figlet > /dev/null
 sudo apt-get install ruby > /dev/null
