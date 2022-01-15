@@ -10,7 +10,7 @@ WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
 jam=$(TZ='Asia/Jakarta' date +%R)
 hari=$(date +"%A")
-tnggl=$(date +"%C %B %Y")
+tnggl=$(date +"%d %B %Y")
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
