@@ -31,19 +31,19 @@ SERVER_PUB_NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 
 # Install WireGuard tools and module
 	if [[ $OS == 'ubuntu' ]]; then
-	apt install -y wireguard
+	apt-get install -y wireguard
 elif [[ $OS == 'debian' ]]; then
 	echo "deb http://deb.debian.org/debian/ unstable main" >/etc/apt/sources.list.d/unstable.list
 	printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' >/etc/apt/preferences.d/limit-unstable
-	apt update
-	apt install -y wireguard-tools iptables iptables-persistent
-	apt install -y linux-headers-$(uname -r)
+	apt-get update
+	apt-get install -y wireguard-tools iptables iptables-persistent
+	apt-get install -y linux-headers-$(uname -r)
 elif [[ ${OS} == 'centos' ]]; then
 	curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
 	yum -y update
 	yum -y install wireguard-dkms wireguard-tools
 	fi
-apt install iptables iptables-persistent -y
+apt-get install iptables iptables-persistent -y
 # Make sure the directory exists (this does not seem the be the case on fedora)
 mkdir /etc/wireguard >/dev/null 2>&1
 
@@ -89,14 +89,14 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/Dork96/Final/main/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/Dork96/Final/main/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/Dork96/Final/main/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/Dork96/Final/main/renew-wg.sh"
+wget -q -O add-wg "https://raw.githubusercontent.com/Dork96/Final/main/add-wg.sh"
+wget -q -O del-wg "https://raw.githubusercontent.com/Dork96/Final/main/del-wg.sh"
+wget -q -O cek-wg "https://raw.githubusercontent.com/Dork96/Final/main/cek-wg.sh"
+wget -q -O renew-wg "https://raw.githubusercontent.com/Dork96/Final/main/renew-wg.sh"
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg
 chmod +x renew-wg
 cd
 rm -f /root/wg.sh
-echo -e "Instaled Wireguard Succes..."
+echo -e "Instaled Wireguard Succes..." | lolcat
