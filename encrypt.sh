@@ -2,12 +2,12 @@
 
 #Install SHC
 apt-get install build-essential -y
-wget -c https://github.com/neurobin/shc/archive/4.0.2.tar.gz
-tar xzvf 4.0.2.tar.gz 
+wget -q -c https://github.com/neurobin/shc/archive/4.0.2.tar.gz
+tar xzvf 4.0.2.tar.gz > /dev/null
 cd shc-4.0.2/
-./configure 
+./configure > /dev/null
 make
-make install
+make install > /dev/null
 
 
 #Masuk Direktori
