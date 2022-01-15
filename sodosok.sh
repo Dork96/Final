@@ -5,10 +5,10 @@ OS=$ID
 ver=$VERSION_ID
 
 #Install_Packages
-echo "Install Paket..."
+echo "Install Paket..." | lolcat
 apt-get install --no-install-recommends build-essential autoconf libtool libssl-dev libpcre3-dev libev-dev asciidoc xmlto automake -y
-echo "Install Paket Selesai."
-echo "#############################################"
+echo "Install Paket Selesai." | lolcat
+echo "#############################################" | lolcat
 
 
 #Install_Shadowsocks_libev
@@ -94,4 +94,4 @@ chmod +x cek-ss
 chmod +x renew-ss
 cd
 rm -f /root/sodosok.sh
-echo -e "Instaled Shadowsocks Succes..."
+echo -e "Instaled Shadowsocks Succes..." | lolcat
