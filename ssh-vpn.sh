@@ -4,7 +4,7 @@
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
-MYIP=$(wget -qO- https://icanhazip.com);
+MYIP=$(wget -q O- https://icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
@@ -20,7 +20,7 @@ commonname=www.wuzzzssh.xyz
 email=admin@wuzzzssh.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Dork96/Final/main/password"
+wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Dork96/Final/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -69,7 +69,7 @@ apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
 # install wget and curl
-apt-get -y install wget curl
+apt-get -y install wget curl < /dev/null
 
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -82,7 +82,7 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 #echo "clear" >> .profile
 #echo "neofetch" >> .profile
 # Admin Welcome
-wget -O /usr/bin/welcomeadmin "https://raw.githubusercontent.com/Dork96/Final/main/welcomeadmin.sh"
+wget -q -O /usr/bin/welcomeadmin "https://raw.githubusercontent.com/Dork96/Final/main/welcomeadmin.sh"
 chmod +x /usr/bin/welcomeadmin
 echo "welcomeadmin" >> .profile
 
@@ -91,14 +91,14 @@ apt-get -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O/etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dork96/Final/main/nginx.conf"
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Dork96/Final/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dork96/Final/main/vps.conf"
+wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Dork96/Final/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Dork96/Final/main/badvpn-udpgw64"
+wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Dork96/Final/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -135,7 +135,7 @@ sed -i $MYIP2 /etc/squid/squid.conf
 apt -y install vnstat
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
-wget https://humdi.net/vnstat/vnstat-2.6.tar.gz
+wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
 tar zxvf vnstat-2.6.tar.gz
 cd vnstat-2.6
 ./configure --prefix=/usr --sysconfdir=/etc && make && make install
@@ -192,10 +192,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
-apt -y install fail2ban
+apt-get -y install fail2ban
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -225,7 +225,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Dork96/Final/main/banner.conf"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Dork96/Final/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -350,13 +350,13 @@ echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
-apt autoclean -y
+apt-get autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove bind9*;
 apt-get -y remove sendmail*
-apt autoremove -y
+apt-get autoremove -y
 # finishing
 cd
 chown -R www-data:www-data /home/vps/public_html
