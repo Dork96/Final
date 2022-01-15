@@ -10,6 +10,9 @@ fi
 
 echo "Process Install Script..."
 echo "Please be patient..."
+
+apt-get update --allow-releaseinfo-change > /dev/null
+
 sudo apt-get update && apt-get upgrade > /dev/null
 #install figlet & lolcat
 sudo apt-get install figlet > /dev/null
