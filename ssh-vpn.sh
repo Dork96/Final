@@ -255,7 +255,7 @@ service sslh restart
 #install webscket
 cd
 
-wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh < /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh > /dev/null
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/websock.sh
