@@ -144,4 +144,4 @@ wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/Dork96/Final/main/del
 wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/Dork96/Final/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
-echo -e "Instaled SSR Succes..."
+echo -e "Instaled SSR Succes..." | lolcat
