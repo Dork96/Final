@@ -69,7 +69,7 @@ apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
 # install wget and curl
-apt-get -y install wget curl < /dev/null
+apt-get -y install wget curl > /dev/null
 
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -127,16 +127,16 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install squid
 cd
-apt-get -y install squid3 < /dev/null
+apt-get -y install squid3 > /dev/null
 wget -q -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Dork96/Final/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
-apt-get -y install vnstat < /dev/null
+apt-get -y install vnstat > /dev/null
 /etc/init.d/vnstat restart
-apt-get -y install libsqlite3-dev < /dev/null
+apt-get -y install libsqlite3-dev > /dev/null
 wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
-tar zxvf vnstat-2.6.tar.gz < /dev/null
+tar zxvf vnstat-2.6.tar.gz > /dev/null
 cd vnstat-2.6
 ./configure --prefix=/usr --sysconfdir=/etc && make && make install
 cd
@@ -149,7 +149,7 @@ rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
 # install stunnel
-apt-get install stunnel4 -y < /dev/null
+apt-get install stunnel4 -y > /dev/null
 cat > /etc/stunnel/stunnel.conf <<-END
 cert = /etc/stunnel/stunnel.pem
 client = no
@@ -195,7 +195,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh < /dev/null
 
 # install fail2ban
-apt-get -y install fail2ban < /dev/null
+apt-get -y install fail2ban > /dev/null
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -242,12 +242,12 @@ iptables -A FORWARD -m string --algo bm --string "torrent" -j DROP
 iptables -A FORWARD -m string --algo bm --string "announce" -j DROP
 iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
 iptables-save > /etc/iptables.up.rules
-iptables-restore -t < /etc/iptables.up.rules
+iptables-restore -t > /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
 #SSLH
-apt-get install sslh -y < /dev/null
+apt-get install sslh -y > /dev/null
 #Forward 443 = 109 = 567
 wget -q -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScript/main/sslh.conf"
 service sslh restart
