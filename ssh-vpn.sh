@@ -62,14 +62,14 @@ echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 #update
-apt update -y
-apt upgrade -y
-apt dist-upgrade -y
+apt-get update -y
+apt-get upgrade -y
+apt-dist upgrade -y
 apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
 # install wget and curl
-apt -y install wget curl
+apt-get -y install wget curl
 
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -87,7 +87,7 @@ chmod +x /usr/bin/welcomeadmin
 echo "welcomeadmin" >> .profile
 
 # install webserver
-apt -y install nginx
+apt-get -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
@@ -117,7 +117,7 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 
 # install dropbear
-apt -y install dropbear
+apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
@@ -127,7 +127,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install squid
 cd
-apt -y install squid3
+apt-get -y install squid3
 wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Dork96/Final/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
