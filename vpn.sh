@@ -6,16 +6,16 @@
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-MYIP=$(wget -qO- https://icanhazip.com);
+MYIP=$(wget -q O- https://icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 
 # Install OpenVPN dan Easy-RSA
-apt install openvpn easy-rsa unzip -y
-apt install openssl iptables iptables-persistent -y
+apt-get install openvpn easy-rsa unzip -y
+apt-get install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget https://raw.githubusercontent.com/Dork96/Final/main/vpn.zip
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
