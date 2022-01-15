@@ -8,11 +8,23 @@ echo "Script Already Installed"
 exit 0
 fi 
 
+
 apt-get update --allow-releaseinfo-change > /dev/null
 
 apt-get update > /dev/null && apt-get upgrade > /dev/null
 #install figlet & lolcat
 clear
+
+MYIP=$(wget -qO- https://icanhazip.com);
+host=$(hostname);
+cat > /etc/hosts <<-END
+127.0.0.1       localhost.localdomain localhost
+127.0.1.1       localhost
+$MYIP   $host
+END
+
+apt-get install dbus -y > /dev/null
+sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 
 apt-get install figlet > /dev/null
 apt-get install ruby > /dev/null
@@ -86,7 +98,6 @@ history -c
 echo "1.0" > /home/ver
 clear
 echo " "
-sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 figlet -c Instalation Success | lolcat
 echo " "
 echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
