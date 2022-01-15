@@ -8,43 +8,43 @@ echo "Script Already Installed"
 exit 0
 fi 
 
-echo "Process Install Script..."
-echo "Please be patient..."
-
 apt-get update --allow-releaseinfo-change > /dev/null
 
 apt-get update > /dev/null && apt-get upgrade > /dev/null
 #install figlet & lolcat
 clear
-echo "Installation Accessories"
+
 apt-get install figlet > /dev/null
 apt-get install ruby > /dev/null
 gem install lolcat > /dev/null
+
+echo "Process Install Script..." | lolcat
+echo "Please be patient..." | lolcat
 
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 #install ssh ovpn
-echo "Installation SSH OVPN"
+echo "Installation SSH OVPN" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh > /dev/null
 #install ohp-server
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null
 #sstp
-echo "Installation SSTP"
+echo "Installation SSTP" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh > /dev/null
 #install ssr
-echo "Installation ShadowSock"
+echo "Installation ShadowSock" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh > /dev/null
 #sodosok
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh > /dev/null
 #installwg
-echo "Installation Wireguard"
+echo "Installation Wireguard" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh > /dev/null
 #install L2TP
-echo "Installation L2TP"
+echo "Installation L2TP" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh > /dev/null
 #install v2ray
-echo "Installation V2RAY"
+echo "Installation V2RAY" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh > /dev/null
 #br-set
