@@ -80,7 +80,7 @@ shc -f renew-tr
 shc -f renew-vless
 shc -f renew-wg
 shc -f renew-ws
-shc -f restar
+shc -f restart
 shc -f restore
 shc -f strt
 shc -f swapkvm
@@ -168,7 +168,7 @@ mv xp.x xp
 #Remove Extension
 rm -f *.x.c
 clear
-echo -e "Installation Script Susuccessful..."
+echo -e "Installation Script Susuccessful..." | lolcat 
 rm -f encrypt
 cd
 rm -rf shc-4.0.2
