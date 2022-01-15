@@ -127,16 +127,16 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # install squid
 cd
-apt-get -y install squid3
+apt-get -y install squid3 < /dev/null
 wget -q -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Dork96/Final/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
-apt-get -y install vnstat
+apt-get -y install vnstat < /dev/null
 /etc/init.d/vnstat restart
-apt-get -y install libsqlite3-dev
+apt-get -y install libsqlite3-dev < /dev/null
 wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
-tar zxvf vnstat-2.6.tar.gz
+tar zxvf vnstat-2.6.tar.gz < /dev/null
 cd vnstat-2.6
 ./configure --prefix=/usr --sysconfdir=/etc && make && make install
 cd
@@ -149,7 +149,7 @@ rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
 # install stunnel
-apt-get install stunnel4 -y
+apt-get install stunnel4 -y < /dev/null
 cat > /etc/stunnel/stunnel.conf <<-END
 cert = /etc/stunnel/stunnel.pem
 client = no
@@ -192,10 +192,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh < /dev/null
 
 # install fail2ban
-apt-get -y install fail2ban
+apt-get -y install fail2ban < /dev/null
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -247,7 +247,7 @@ netfilter-persistent save
 netfilter-persistent reload
 
 #SSLH
-apt-get install sslh -y
+apt-get install sslh -y < /dev/null
 #Forward 443 = 109 = 567
 wget -q -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScript/main/sslh.conf"
 service sslh restart
@@ -255,7 +255,7 @@ service sslh restart
 #install webscket
 cd
 
-wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
+wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh < /dev/null
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/websock.sh
@@ -351,7 +351,7 @@ echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
 cd
 apt-get autoclean -y
-apt -y remove --purge unscd
+apt-get -y remove --purge unscd
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
 apt-get -y --purge remove bind9*;
