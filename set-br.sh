@@ -1,14 +1,14 @@
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Dork96/Final/main/rclone.conf"
+wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Dork96/Final/main/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
 cd
 rm -rf wondershaper
 echo > /home/limit
-apt install msmtp-mta ca-certificates bsd-mailx -y
+apt-get install msmtp-mta ca-certificates bsd-mailx -y
 cat<<EOF>>/etc/msmtprc
 defaults
 tls on
@@ -26,11 +26,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/Dork96/Final/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/Dork96/Final/main/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Dork96/Final/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/Dork96/Final/main/strt.sh"
-wget -O speed-limiter "https://raw.githubusercontent.com/Dork96/Final/main/speed-limiter.sh"
+wget -q -O autobackup "https://raw.githubusercontent.com/Dork96/Final/main/autobackup.sh"
+wget -q -O backup "https://raw.githubusercontent.com/Dork96/Final/main/backup.sh"
+wget -q -O restore "https://raw.githubusercontent.com/Dork96/Final/main/restore.sh"
+wget -q -O strt "https://raw.githubusercontent.com/Dork96/Final/main/strt.sh"
+wget -q -O speed-limiter "https://raw.githubusercontent.com/Dork96/Final/main/speed-limiter.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
