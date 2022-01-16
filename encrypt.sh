@@ -3,15 +3,14 @@
 #Install SHC
 apt-get install build-essential -y
 wget -q -c https://github.com/neurobin/shc/archive/4.0.2.tar.gz
-tar xzvf 4.0.2.tar.gz > /dev/null
+tar xzvf 4.0.2.tar.gz
 cd shc-4.0.2/
-./configure > /dev/null
+./configure 
 make
-make install > /dev/null
+make install
 
 
 #Masuk Direktori
-cd 
 cd /usr/bin/
 
 #Encrypt File
