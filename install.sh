@@ -24,7 +24,7 @@ cat > /etc/hosts <<-END
 $MYIP   $host
 END
 
-apt-get install dbus -y > /dev/null
+apt-get install dbus -y
 
 
 apt-get install figlet -y > /dev/null
