@@ -196,7 +196,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh < /dev/null
 echo "Installed OPENVPN Success..." | lolcat
 # install fail2ban
-apt-get -y install fail2ban > /dev/null
+apt-get -y install fail2ban 
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -248,7 +248,7 @@ netfilter-persistent save
 netfilter-persistent reload
 
 #SSLH
-apt-get install sslh -y > /dev/null
+apt-get install sslh -y 
 #Forward 443 = 109 = 567
 wget -q -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScript/main/sslh.conf"
 service sslh restart
