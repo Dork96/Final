@@ -29,7 +29,7 @@ sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 apt-get install figlet -y > /dev/null
 apt-get install ruby -y > /dev/null
 gem install lolcat
-
+clear
 echo "Process Install Script..." | lolcat
 echo "Please be patient..." | lolcat
 
