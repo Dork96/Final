@@ -194,7 +194,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 #OpenVPN
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh < /dev/null
-
+echo "Installed OPENVPN Success..." | lolcat
 # install fail2ban
 apt-get -y install fail2ban > /dev/null
 
@@ -262,7 +262,7 @@ rm -f /root/cert.pem
 rm -f /root/websock.sh
 rm -f /root/ssh-vpn.sh
 clear
-echo -e "Installed Websocket Success..." | lolcat
+echo "Installed Websocket Success..." | lolcat
 
 # download script
 cd /usr/bin
@@ -387,6 +387,6 @@ rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
 clear
-echo -e "Instaled SSH OVPN Succes..." | lolcat
+echo "Instaled SSH OVPN Succes..." | lolcat
 # finihsing
 clear
