@@ -47,6 +47,7 @@ echo "Installation L2TP" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh > /dev/null
 #install v2ray
 echo "Installation V2RAY" | lolcat
+cd
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh > /dev/null
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh > /dev/null
 #br-set
