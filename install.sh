@@ -119,7 +119,7 @@ echo "-------------------------- Created By THIRASTORE -------------------------
 echo "================================================================================" | tee -a log-install.txt
 echo ""
 echo "	 Your VPS Will Be Automatical Reboot In 10 s"
-
+EOF	
 rm -f install.sh
 
 sleep 10
