@@ -1,5 +1,5 @@
 #!/bin/bash
-domain=$(cat /root/domain)
+domain = $(cat /root/domain)
 apt-get install iptables iptables-persistent -y
 apt-get install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
 apt-get install socat cron bash-completion ntpdate -y
