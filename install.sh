@@ -15,6 +15,7 @@ apt-get update -y > /dev/null
 apt-get upgrade -y > /dev/null
 #install figlet & lolcat
 clear
+sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 MYIP=$(wget -qO- https://icanhazip.com);
 host=$(hostname);
 cat > /etc/hosts <<-END
@@ -24,7 +25,7 @@ $MYIP   $host
 END
 
 apt-get install dbus -y > /dev/null
-sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
+
 
 apt-get install figlet -y > /dev/null
 apt-get install ruby -y > /dev/null
