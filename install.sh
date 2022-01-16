@@ -9,16 +9,16 @@ exit 0
 fi 
 
 
-apt-get update --allow-releaseinfo-change 
+apt-get update --allow-releaseinfo-change -y /dev/null
 
-apt-get update > /dev/null && apt-get upgrade 
+apt-get update > /dev/null && apt-get upgrade -y /dev/null
 #install figlet & lolcat
 clear
 
 
-apt-get install figlet > /dev/null
-apt-get install ruby > /dev/null
-gem install lolcat > /dev/null
+apt-get install figlet -y > /dev/null
+apt-get install ruby -y > /dev/null
+gem install lolcat  -y > /dev/null
 
 echo "Process Install Script..." | lolcat
 echo "Please be patient..." | lolcat
