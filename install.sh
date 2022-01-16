@@ -15,7 +15,7 @@ apt-get update -y
 apt-get upgrade -y 
 #install figlet & lolcat
 clear
-sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
+
 MYIP=$(wget -qO- https://icanhazip.com);
 host=$(hostname);
 cat > /etc/hosts <<-END
@@ -92,6 +92,7 @@ systemctl enable autosett
 history -c
 echo "1.0" > /home/ver
 clear
+sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 echo " "
 figlet -c Instalation Success | lolcat
 echo " "
