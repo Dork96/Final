@@ -15,17 +15,17 @@ echo "#############################################" | lolcat
 echo "Install Shadowsocks-libev..."
 apt-get install software-properties-common -y
 if [[ $OS == 'ubuntu' ]]; then
-apt install shadowsocks-libev -y
-apt install simple-obfs -y
+apt-get install shadowsocks-libev -y
+apt-get install simple-obfs -y
 elif [[ $OS == 'debian' ]]; then
 if [[ "$ver" = "9" ]]; then
 echo "deb http://deb.debian.org/debian stretch-backports main" | tee /etc/apt/sources.list.d/stretch-backports.list
-apt update
+apt-get -y update
 apt -t stretch-backports install shadowsocks-libev -y
 apt -t stretch-backports install simple-obfs -y
 elif [[ "$ver" = "10" ]]; then
 echo "deb http://deb.debian.org/debian buster-backports main" | tee /etc/apt/sources.list.d/buster-backports.list
-apt update
+apt-get -y update
 apt -t buster-backports install shadowsocks-libev -y
 apt -t buster-backports install simple-obfs -y
 fi
@@ -84,10 +84,10 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss "https://raw.githubusercontent.com/Dork96/Final/main/add-ss.sh"
-wget -O del-ss "https://raw.githubusercontent.com/Dork96/Final/main/del-ss.sh"
-wget -O cek-ss "https://raw.githubusercontent.com/Dork96/Final/main/cek-ss.sh"
-wget -O renew-ss "https://raw.githubusercontent.com/Dork96/Final/main/renew-ss.sh"
+wget -q -O add-ss "https://raw.githubusercontent.com/Dork96/Final/main/add-ss.sh"
+wget -q -O del-ss "https://raw.githubusercontent.com/Dork96/Final/main/del-ss.sh"
+wget -q -O cek-ss "https://raw.githubusercontent.com/Dork96/Final/main/cek-ss.sh"
+wget -q -O renew-ss "https://raw.githubusercontent.com/Dork96/Final/main/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
