@@ -47,7 +47,7 @@ elif [[ $ver == '8' ]]; then
   yum "$REPO4" -y install systemd-devel libevent-devel fipscheck-devel 
 fi
 else
-apt install openssl iptables iptables-persistent -y
+apt-get install openssl iptables iptables-persistent -y
 apt-get -y install libnss3-dev libnspr4-dev pkg-config \
   libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev \
   libcurl4-nss-dev flex bison gcc make libnss3-tools \
