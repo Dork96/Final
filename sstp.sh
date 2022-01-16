@@ -22,16 +22,16 @@ mkdir /home/sstp
 touch /home/sstp/sstp_account
 touch /var/lib/premium-script/data-user-sstp
 #detail nama perusahaan
-country=MY
-state=Malaysia
-locality=Malaysia
-organization=www.abidz.ga
-organizationalunit=www.abidz.ga
-commonname=okkaykayyo
-email=admin@abidz.ga
+country=ID
+state=Indonesia
+locality=Indonesia
+organization=THIRASTORE
+organizationalunit=www.wuzzzssh.xyz
+commonname=www.wuzzzssh.xyz
+email=admin@wuzzzssh.xyz
 
 #install sstp
-apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
+apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp > /dev/null
 git clone https://github.com/accel-ppp/accel-ppp.git /opt/accel-ppp-code
 mkdir /opt/accel-ppp-code/build
 cd /opt/accel-ppp-code/build/
@@ -40,7 +40,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget =q -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/Dork96/Final/main/accel.conf"
+wget -q -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/Dork96/Final/main/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
@@ -62,9 +62,9 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget =q -O /usr/bin/add-sstp https://raw.githubusercontent.com/Dork96/Final/main/add-sstp.sh && chmod +x /usr/bin/add-sstp
-wget =q -O /usr/bin/del-sstp https://raw.githubusercontent.com/Dork96/Final/main/del-sstp.sh && chmod +x /usr/bin/del-sstp
-wget =q -O /usr/bin/cek-sstp https://raw.githubusercontent.com/iDork96/Final/main/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
-wget =q -O /usr/bin/renew-sstp https://raw.githubusercontent.com/Dork96/Final/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
+wget -q -O /usr/bin/add-sstp https://raw.githubusercontent.com/Dork96/Final/main/add-sstp.sh && chmod +x /usr/bin/add-sstp
+wget -q -O /usr/bin/del-sstp https://raw.githubusercontent.com/Dork96/Final/main/del-sstp.sh && chmod +x /usr/bin/del-sstp
+wget -q -O /usr/bin/cek-sstp https://raw.githubusercontent.com/iDork96/Final/main/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
+wget -q -O /usr/bin/renew-sstp https://raw.githubusercontent.com/Dork96/Final/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
 rm -f /root/sstp.sh
 echo -e "Instaled SSTP Succes..." | lolcat
