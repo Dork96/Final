@@ -11,10 +11,11 @@ make install > /dev/null
 
 
 #Masuk Direktori
+cd 
 cd /usr/bin
 
 #Encrypt File
-shc -f add-host
+shc -f add-host 
 shc -f add-l2tp
 shc -f add-pptp
 shc -f add-ss
