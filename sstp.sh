@@ -31,7 +31,7 @@ commonname=www.wuzzzssh.xyz
 email=admin@wuzzzssh.xyz
 
 #install sstp
-apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp > /dev/null
+apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
 git clone https://github.com/accel-ppp/accel-ppp.git /opt/accel-ppp-code
 mkdir /opt/accel-ppp-code/build
 cd /opt/accel-ppp-code/build/
