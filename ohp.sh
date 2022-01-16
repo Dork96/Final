@@ -11,7 +11,7 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #Update Repository VPS
 clear
-apt update 
+apt-get -y update 
 apt-get -y upgrade
 
 #Port Server
@@ -22,7 +22,7 @@ Port_OHP='8087';
 
 #Installing ohp Server
 cd 
-wget -O /usr/local/bin/ohp "https://raw.githubusercontent.com/EvoTeamMalaysia/AutoScript/main/ohp"
+wget -q -O /usr/local/bin/ohp "https://raw.githubusercontent.com/Dork96/Final/main/ohp"
 chmod +x /usr/local/bin/ohp
 
 #Buat File OpenVPN TCP OHP
@@ -74,9 +74,9 @@ cd
 #Buat Service Untuk OHP
 cat > /etc/systemd/system/ohp.service <<END
 [Unit]
-Description=Direct Squid Proxy For OpenVPN TCP By OKKAY KAYYO
-Documentation=https://okkaykayyo.my
-Documentation=https://t.me/okkaykayyo
+Description=Direct Squid Proxy For OpenVPN TCP By THIRASTORE
+Documentation=https://wuzzzssh.xyz
+Documentation=https://t.me/T_STORE17
 Wants=network.target
 After=network.target
 
