@@ -8,7 +8,7 @@ echo "Script Already Installed"
 exit 0
 fi 
 
-
+cd
 apt-get update --allow-releaseinfo-change -y /dev/null
 
 apt-get update > /dev/null && apt-get upgrade -y /dev/null
