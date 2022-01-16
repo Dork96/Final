@@ -59,6 +59,8 @@ wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x
 #install v2ray
 echo "Installation V2RAY" | lolcat
 cd
+sleep 5
+echo "Create Domain CDN Cloudflare" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh 
 #br-set
@@ -68,7 +70,7 @@ wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x s
 cd /home/vps/public_html
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/index.html
 # Encrypt
-sleep 10
+sleep 5
 echo "Set Index" | lolcat
 cd
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh	
