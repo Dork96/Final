@@ -67,45 +67,17 @@ wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x s
 cd /home/vps/public_html
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/index.html
 # Encrypt
+sleep 10
+echo "Set Index" | lolcat
 cd
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/encrypt.sh && chmod +x encrypt.sh && ./encrypt.sh	
 
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
 Documentation=https://www.wuzzzssh.xyz
 
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /etc/set.sh
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl enable autosett
-history -c
-echo "1.0" > /home/ver
-clear
-echo " "
-figlet -c Instalation Success | lolcat
-echo " "
-echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
-echo "================================= Premium Final ===========================" | tee -a log-install.txt
-echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 442, OHP 8087"  | tee -a log-install.txt
-echo "   - Stunnel4                : 443, 777"  | tee -a log-install.txt
-echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
-echo "   - WebSocket Dropbear      : 8143" | tee -a log-install.txt
-echo "   - WebSocket OpenSSH       : 8022" | tee -a log-install.txt
-echo "   - WebSocket OpenVPN       : 2082" | tee -a log-install.txt
-echo "   - WebSocket TLS           : 700" | tee -a log-install.txt
-echo "   - Squid Proxy             : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
-echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
+[Service]: 7100, 7200, 7300"  | tee -a log-install.txt
 echo "   - Nginx                   : 81"  | tee -a log-install.txt
 echo "   - Wireguard               : 7070"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
