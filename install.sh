@@ -9,9 +9,9 @@ exit 0
 fi 
 
 
-apt-get update --allow-releaseinfo-change > /dev/null
+apt-get update --allow-releaseinfo-change 
 
-apt-get update > /dev/null && apt-get upgrade > /dev/null
+apt-get update > /dev/null && apt-get upgrade 
 #install figlet & lolcat
 clear
 
