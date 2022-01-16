@@ -9,9 +9,10 @@ exit 0
 fi 
 
 cd
-apt-get update --allow-releaseinfo-change -y /dev/null
+apt-get update --allow-releaseinfo-change -y > /dev/null
 
-apt-get update > /dev/null && apt-get upgrade -y /dev/null
+apt-get update -y > /dev/null 
+apt-get upgrade -y > /dev/null
 #install figlet & lolcat
 clear
 MYIP=$(wget -qO- https://icanhazip.com);
