@@ -21,13 +21,13 @@ elif [[ $OS == 'debian' ]]; then
 if [[ "$ver" = "9" ]]; then
 echo "deb http://deb.debian.org/debian stretch-backports main" | tee /etc/apt/sources.list.d/stretch-backports.list
 apt-get -y update
-apt -t stretch-backports install shadowsocks-libev -y
-apt -t stretch-backports install simple-obfs -y
+apt-get -t stretch-backports install shadowsocks-libev -y
+apt-get -t stretch-backports install simple-obfs -y
 elif [[ "$ver" = "10" ]]; then
 echo "deb http://deb.debian.org/debian buster-backports main" | tee /etc/apt/sources.list.d/buster-backports.list
 apt-get -y update
-apt -t buster-backports install shadowsocks-libev -y
-apt -t buster-backports install simple-obfs -y
+apt-get -t buster-backports install shadowsocks-libev -y
+apt-get -t buster-backports install simple-obfs -y
 fi
 fi
 echo "Install Shadowsocks-libev Selesai."
@@ -94,4 +94,4 @@ chmod +x cek-ss
 chmod +x renew-ss
 cd
 rm -f /root/sodosok.sh
-echo -e "Instaled Shadowsocks Succes..." | lolcat
+echo  "Instaled Shadowsocks Succes..." | lolcat
