@@ -35,6 +35,7 @@ apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcr
 git clone https://github.com/accel-ppp/accel-ppp.git /opt/accel-ppp-code
 mkdir /opt/accel-ppp-code/build
 cd /opt/accel-ppp-code/build/
+apt-get install cmake -y
 cmake -DBUILD_IPOE_DRIVER=TRUE -DBUILD_VLAN_MON_DRIVER=TRUE -DCMAKE_INSTALL_PREFIX=/usr -DKDIR=/usr/src/linux-headers-`uname -r` -DLUA=TRUE -DCPACK_TYPE=$yoi ..
 make
 cpack -G DEB
