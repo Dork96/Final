@@ -15,16 +15,6 @@ apt-get update > /dev/null && apt-get upgrade > /dev/null
 #install figlet & lolcat
 clear
 
-MYIP=$(wget -qO- https://icanhazip.com);
-host=$(hostname);
-cat > /etc/hosts <<-END
-127.0.0.1       localhost.localdomain localhost
-127.0.1.1       localhost
-$MYIP   $host
-END
-
-apt-get install dbus -y > /dev/null
-sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
 
 apt-get install figlet > /dev/null
 apt-get install ruby > /dev/null
@@ -156,5 +146,16 @@ echo "==========================================================================
 echo ""
 echo "	 Your VPS Will Be Automatical Reboot In 10 s"
 rm -f install.sh
+MYIP=$(wget -qO- https://icanhazip.com);
+host=$(hostname);
+cat > /etc/hosts <<-END
+127.0.0.1       localhost.localdomain localhost
+127.0.1.1       localhost
+$MYIP   $host
+END
+
+apt-get install dbus -y > /dev/null
+sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
+
 sleep 10
 reboot
