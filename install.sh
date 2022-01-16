@@ -9,10 +9,10 @@ exit 0
 fi 
 
 cd
-apt-get update --allow-releaseinfo-change -y > /dev/null
+apt-get update --allow-releaseinfo-change -y 
 
-apt-get update -y > /dev/null 
-apt-get upgrade -y > /dev/null
+apt-get update -y  
+apt-get upgrade -y 
 #install figlet & lolcat
 clear
 sudo hostnamectl set-hostname SETUP-BY-THIRASTORE
@@ -39,30 +39,30 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 #install ssh ovpn
 echo "Installation SSH OVPN" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ohp-server
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #sstp
 echo "Installation SSTP" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh
 #install ssr
 echo "Installation ShadowSock" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh
 #sodosok
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
 #installwg
 echo "Installation Wireguard" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/wg.sh && chmod +x wg.sh && ./wg.sh
 #install L2TP
 echo "Installation L2TP" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
 #install v2ray
 echo "Installation V2RAY" | lolcat
 cd
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh > /dev/null
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh 
 #br-set
-wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh > /dev/null
+wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # Set Index
 cd /home/vps/public_html
