@@ -64,8 +64,13 @@ echo "Create Domain CDN Cloudflare" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh 
 #br-set
-wget https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#websocket
 
+
+wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
+
+clear
 # Set Index
 cd /home/vps/public_html
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/index.html
@@ -84,7 +89,7 @@ Documentation=https://www.wuzzzssh.xyz
 Type=oneshot
 ExecStart=/bin/bash /etc/set.sh
 RemainAfterExit=yes
-[Install]
+[Install] 
 WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
