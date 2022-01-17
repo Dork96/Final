@@ -38,6 +38,8 @@ mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
 
 #install ssh ovpn
+echo "Create Domain CDN Cloudflare" | lolcat
+wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
 echo "Installation SSH OVPN" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #install ohp-server
@@ -58,10 +60,6 @@ echo "Installation L2TP" | lolcat
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
 #install v2ray
 echo "Installation V2RAY" | lolcat
-cd
-sleep 5
-echo "Create Domain CDN Cloudflare" | lolcat
-wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf.sh && ./cf.sh
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh 
 #br-set
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
