@@ -28,8 +28,8 @@ chmod +x /usr/local/bin/ohp
 #Buat File OpenVPN TCP OHP
 cat > /etc/openvpn/tcp-ohp.ovpn <<END
 ############# WELCOME TO #############
-########## OKKAY KAYYO VPN ############
-###### OKKAY KAYYO OHP SERVER ########
+########## THIRASTORE VPN ############
+####### THIRASTORE OHP SERVER ########
 setenv CLIENT_CERT 0
 setenv opt block-outside-dns
 client
@@ -98,3 +98,5 @@ echo -e "${GREEN}Done Installing OHP Server${NC}"
 echo -e "Port OVPN OHP TCP: $ohpp"
 echo -e "Link Download OVPN OHP: http://$MYIP:81/tcp-ohp.ovpn"
 echo -e "Script By THIRASTORE"
+cd
+rm -rf ohp.sh
