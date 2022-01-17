@@ -77,7 +77,6 @@ cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
 Documentation=https://www.wuzzzssh.xyz
-
 [Service]
 Type=oneshot
 ExecStart=/bin/bash /etc/set.sh
