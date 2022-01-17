@@ -264,92 +264,92 @@ echo "Installed Websocket Success..." | lolcat
 
 # download script
 cd /usr/bin
-wget -q -O add-host "https://raw.githubusercontent.com/Dork96/Final/main/add-host.sh"
-wget -q -O about "https://raw.githubusercontent.com/Dork96/Final/main/about.sh"
-wget -q -O menu "https://raw.githubusercontent.com/Dork96/Final/main/menu.sh"
-wget -q -O add-ssh "https://raw.githubusercontent.com/Dork96/Final/main/add-ssh.sh"
-wget -q -O trial-ssh "https://raw.githubusercontent.com/Dork96/Final/main/trial-ssh.sh"
-wget -q -O del-ssh "https://raw.githubusercontent.com/Dork96/Final/main/del-ssh.sh"
-wget -q -O list-ssh "https://raw.githubusercontent.com/Dork96/Final/main/list-ssh.sh"
-wget -q -O delete "https://raw.githubusercontent.com/Dork96/Final/main/delete.sh"
-wget -q -O cek-ssh "https://raw.githubusercontent.com/Dork96/Final/main/cek-ssh.sh"
-wget -q -O restart "https://raw.githubusercontent.com/Dork96/Final/main/restart.sh"
-wget -q -O speedtest "https://raw.githubusercontent.com/Dork96/Final/main/speedtest_cli.py"
-wget -q -O info "https://raw.githubusercontent.com/Dork96/Final/main/info.sh"
-wget -q -O ram "https://raw.githubusercontent.com/Dork96/Final/main/ram.sh"
-wget -q -O renew-ssh "https://raw.githubusercontent.com/Dork96/Final/main/renew-ssh.sh"
-wget -q -O autokill "https://raw.githubusercontent.com/Dork96/Final/main/autokill.sh"
-wget -q -O mulog "https://raw.githubusercontent.com/Dork96/Final/main/mulog.sh"
-wget -q -O tendang "https://raw.githubusercontent.com/Dork96/Final/main/tendang.sh"
-wget -q -O change-port "https://raw.githubusercontent.com/Dork96/Final/main/change-port.sh"
-wget -q -O port-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/port-ovpn.sh"
-wget -q -O port-ssl "https://raw.githubusercontent.com/Dork96/Final/main/port-ssl.sh"
-wget -q -O port-wg "https://raw.githubusercontent.com/Dork96/Final/main/port-wg.sh"
-wget -q -O port-tr "https://raw.githubusercontent.com/Dork96/Final/main/port-tr.sh"
-wget -q -O port-sstp "https://raw.githubusercontent.com/Dork96/Final/main/port-sstp.sh"
-wget -q -O port-squid "https://raw.githubusercontent.com/Dork96/Final/main/port-squid.sh"
-wget -q -O port-ws "https://raw.githubusercontent.com/Dork96/Final/main/port-ws.sh"
-wget -q -O port-vless "https://raw.githubusercontent.com/Dork96/Final/main/port-vless.sh"
-wget -q -O webmin "https://raw.githubusercontent.com/Dork96/Final/main/webmin.sh"
-wget -q -O xp "https://raw.githubusercontent.com/Dork96/Final/main/xp.sh"
-wget -q -O kernel-up "https://raw.githubusercontent.com/Dork96/Final/main/kernel.sh"
-#wget -O update "https://raw.githubusercontent.com/Dork96/Final/main/update-1.2.sh"
-wget -q -O auto-reboot "https://raw.githubusercontent.com/Dork96/Final/main/reboot.sh"
+wget -q -O /usr/bin/add-host "https://raw.githubusercontent.com/Dork96/Final/main/add-host.sh"
+wget -q -O /usr/bin/about "https://raw.githubusercontent.com/Dork96/Final/main/about.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/Dork96/Final/main/menu.sh"
+wget -q -O /usr/bin/add-ssh "https://raw.githubusercontent.com/Dork96/Final/main/add-ssh.sh"
+wget -q -O /usr/bin/trial-ssh "https://raw.githubusercontent.com/Dork96/Final/main/trial-ssh.sh"
+wget -q -O /usr/bin/del-ssh "https://raw.githubusercontent.com/Dork96/Final/main/del-ssh.sh"
+wget -q -O /usr/bin/list-ssh "https://raw.githubusercontent.com/Dork96/Final/main/list-ssh.sh"
+wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/Dork96/Final/main/delete.sh"
+wget -q -O /usr/bin/cek-ssh "https://raw.githubusercontent.com/Dork96/Final/main/cek-ssh.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Dork96/Final/main/restart.sh"
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/Dork96/Final/main/speedtest_cli.py"
+wget -q -O /usr/bin/info "https://raw.githubusercontent.com/Dork96/Final/main/info.sh"
+wget -q -O /usr/bin/ram "https://raw.githubusercontent.com/Dork96/Final/main/ram.sh"
+wget -q -O /usr/bin/renew-ssh "https://raw.githubusercontent.com/Dork96/Final/main/renew-ssh.sh"
+wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/Dork96/Final/main/autokill.sh"
+wget -q -O /usr/bin/mulog "https://raw.githubusercontent.com/Dork96/Final/main/mulog.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/Dork96/Final/main/tendang.sh"
+wget -q -O /usr/bin/change-port "https://raw.githubusercontent.com/Dork96/Final/main/change-port.sh"
+wget -q -O /usr/bin/port-ovpn "https://raw.githubusercontent.com/Dork96/Final/main/port-ovpn.sh"
+wget -q -O /usr/bin/port-ssl "https://raw.githubusercontent.com/Dork96/Final/main/port-ssl.sh"
+wget -q -O /usr/bin/port-wg "https://raw.githubusercontent.com/Dork96/Final/main/port-wg.sh"
+wget -q -O /usr/bin/port-tr "https://raw.githubusercontent.com/Dork96/Final/main/port-tr.sh"
+wget -q -O /usr/bin/port-sstp "https://raw.githubusercontent.com/Dork96/Final/main/port-sstp.sh"
+wget -q -O /usr/bin/port-squid "https://raw.githubusercontent.com/Dork96/Final/main/port-squid.sh"
+wget -q -O /usr/bin/port-ws "https://raw.githubusercontent.com/Dork96/Final/main/port-ws.sh"
+wget -q -O /usr/bin/port-vless "https://raw.githubusercontent.com/Dork96/Final/main/port-vless.sh"
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/Dork96/Final/main/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/Dork96/Final/main/xp.sh"
+wget -q -O /usr/bin/kernel-up "https://raw.githubusercontent.com/Dork96/Final/main/kernel.sh"
+#wget -O /usr/bin/update "https://raw.githubusercontent.com/Dork96/Final/main/update-1.2.sh"
+wget -q -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Dork96/Final/main/reboot.sh"
 
-wget -q -O menu-l2tp "https://raw.githubusercontent.com/Dork96/Final/main/menu-l2tp.sh"
-wget -q -O menu-ssh "https://raw.githubusercontent.com/Dork96/Final/main/menu-ssh.sh"
-wget -q -O menu-system "https://raw.githubusercontent.com/Dork96/Final/main/menu-system.sh"
-wget -q -O menu-tr "https://raw.githubusercontent.com/Dork96/Final/main/menu-tr.sh"
-wget -q -O menu-v2ray "https://raw.githubusercontent.com/Dork96/Final/main/menu-v2ray.sh"
-wget -q -O menu-wr "https://raw.githubusercontent.com/Dork96/Final/main/menu-wr.sh"
+wget -q -O /usr/bin/menu-l2tp "https://raw.githubusercontent.com/Dork96/Final/main/menu-l2tp.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Dork96/Final/main/menu-ssh.sh"
+wget -q -O /usr/bin/menu-system "https://raw.githubusercontent.com/Dork96/Final/main/menu-system.sh"
+wget -q -O /usr/bin/menu-tr "https://raw.githubusercontent.com/Dork96/Final/main/menu-tr.sh"
+wget -q -O /usr/bin/menu-v2ray "https://raw.githubusercontent.com/Dork96/Final/main/menu-v2ray.sh"
+wget -q -O /usr/bin/menu-wr "https://raw.githubusercontent.com/Dork96/Final/main/menu-wr.sh"
 
 
-chmod +x add-host
-chmod +x menu
-chmod +x add-ssh
-chmod +x trial-ssh
-chmod +x del-ssh
-chmod +x list-ssh
-chmod +x delete
-chmod +x cek-ssh
-chmod +x restart
-chmod +x speedtest
-chmod +x info
-chmod +x about
-chmod +x autokill
-chmod +x mulog
-chmod +x tendang
-chmod +x ceklim
-chmod +x ram
-chmod +x renew-ssh
-chmod +x clear-log
-chmod +x change-port
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-sstp
-chmod +x port-tr
-chmod +x port-squid
-chmod +x port-ws
-chmod +x port-vless
-chmod +x webmin
-chmod +x xp
-chmod +x kernel-up
-#chmod +x update
-chmod +x auto-reboot
+chmod +x /usr/bin/add-host
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/add-ssh
+chmod +x /usr/bin/trial-ssh
+chmod +x /usr/bin/del-ssh
+chmod +x /usr/bin/list-ssh
+chmod +x /usr/bin/delete
+chmod +x /usr/bin/cek-ssh
+chmod +x /usr/bin/restart
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/info
+chmod +x /usr/bin/about
+chmod +x /usr/bin/autokill
+chmod +x /usr/bin/mulog
+chmod +x /usr/bin/tendang
+chmod +x /usr/bin/ceklim
+chmod +x /usr/bin/ram
+chmod +x /usr/bin/renew-ssh
+chmod +x /usr/bin/clear-log
+chmod +x /usr/bin/change-port
+chmod +x /usr/bin/port-ovpn
+chmod +x /usr/bin/port-ssl
+chmod +x /usr/bin/port-wg
+chmod +x /usr/bin/port-sstp
+chmod +x /usr/bin/port-tr
+chmod +x /usr/bin/port-squid
+chmod +x /usr/bin/port-ws
+chmod +x /usr/bin/port-vless
+chmod +x /usr/bin/webmin
+chmod +x /usr/bin/xp
+chmod +x /usr/bin/kernel-up
+#chmod +x /usr/bin/update
+chmod +x /usr/bin/auto-reboot
 
-chmod +x menu-l2tp
-chmod +x menu-ssh
-chmod +x menu-system
-chmod +x menu-tr
-chmod +x menu-v2ray
-chmod +x menu-wr
+chmod +x /usr/bin/menu-l2tp
+chmod +x /usr/bin/menu-ssh
+chmod +x /usr/bin/menu-system
+chmod +x /usr/bin/menu-tr
+chmod +x /usr/bin/menu-v2ray
+chmod +x /usr/bin/menu-wr
 
 # should replace this with -i
 cd
-sed 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config > sshd.txt
+sudo sed 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config > sshd.txt
 mv -f sshd.txt /etc/ssh/sshd_config
-sed 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config > sshd.txt
+sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config > sshd.txt
 mv -f sshd.txt /etc/ssh/sshd_config
 rm -r sshd.txt
 
