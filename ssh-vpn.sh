@@ -255,6 +255,7 @@ wget -q -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScrip
 service sslh restart
 
 #install websocket
+wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
 
 cd
 echo "Installed Websocket Success..." | lolcat
