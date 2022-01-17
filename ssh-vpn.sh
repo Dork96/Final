@@ -197,7 +197,7 @@ apt-get -y install fail2ban
 
 #OpenVPN
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
-echo "Installed OPENVPN Success..." | lolcat
+
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -230,7 +230,7 @@ clear
 wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Dork96/Final/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-
+cd
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
 iptables -A FORWARD -m string --string "announce_peer" --algo bm -j DROP
@@ -395,4 +395,4 @@ rm -f /root/ssh-vpn.sh
 clear
 echo "Instaled SSH SSL OVPN Succes..." | lolcat
 # finihsing
-clear
+
