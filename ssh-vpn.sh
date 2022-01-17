@@ -258,7 +258,6 @@ cd
 
 wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
 
-rm -f /root/websock.sh
 clear
 echo "Installed Websocket Success..." | lolcat
 
