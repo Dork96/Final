@@ -244,7 +244,7 @@ iptables -A FORWARD -m string --algo bm --string "torrent" -j DROP
 iptables -A FORWARD -m string --algo bm --string "announce" -j DROP
 iptables -A FORWARD -m string --algo bm --string "info_hash" -j DROP
 iptables-save > /etc/iptables.up.rules
-iptables-restore -t > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
@@ -254,7 +254,8 @@ apt-get install sslh -y
 wget -q -O /etc/default/sslh "https://raw.githubusercontent.com/Dork96/DorkScript/main/sslh.conf"
 service sslh restart
 
-#install webscket
+#install websocket
+
 cd
 echo "Installed Websocket Success..." | lolcat
 
