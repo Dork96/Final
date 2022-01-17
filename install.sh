@@ -66,11 +66,8 @@ wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +
 #br-set
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #websocket
-
-
 wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
 
-clear
 # Set Index
 cd /home/vps/public_html
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/index.html
