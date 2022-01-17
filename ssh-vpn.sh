@@ -101,18 +101,18 @@ cd
 dpkg --configure -a
 wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Dork96/Final/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 > /dev/null &' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 > /dev/null &' /etc/rc.local
+sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &' /etc/rc.local
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7400 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7500 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7600 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7700 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 > /dev/null &
+screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 > /dev/null &
 
 # setting port ssh
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
