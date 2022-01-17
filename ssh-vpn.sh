@@ -192,11 +192,12 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
+# install fail2ban
+apt-get -y install fail2ban 
+
 #OpenVPN
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 echo "Installed OPENVPN Success..." | lolcat
-# install fail2ban
-apt-get -y install fail2ban 
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -392,6 +393,6 @@ rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
 clear
-echo "Instaled SSH OVPN Succes..." | lolcat
+echo "Instaled SSH SSL OVPN Succes..." | lolcat
 # finihsing
 clear
