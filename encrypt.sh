@@ -171,6 +171,7 @@ clear
 echo -e "Installation Script Susuccessful..." | lolcat 
 rm -f encrypt
 cd
+rm -rf encrypt.sh
 rm -rf shc-4.0.2
 rm -rf 4.0.2.tar.gz
 rm -rf master.zip
