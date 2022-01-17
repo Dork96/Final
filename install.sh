@@ -65,8 +65,6 @@ wget -q https://raw.githubusercontent.com/Dork96/Final/main/cf.sh && chmod +x cf
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh 
 #br-set
 wget -q https://raw.githubusercontent.com/Dork96/Final/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-#websocket
-wget -q https://raw.githubusercontent.com/Dork96/DorkScript/main/websock.sh && chmod +x websock.sh && ./websock.sh
 
 # Set Index
 cd /home/vps/public_html
