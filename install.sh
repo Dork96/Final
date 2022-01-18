@@ -7,7 +7,7 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi 
-
+timedatectl set-timezone Asia/Jakarta
 cd
 apt-get update --allow-releaseinfo-change -y 
 
