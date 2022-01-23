@@ -22,6 +22,7 @@ cat > /etc/systemd/system/ws-dropbear.service << END
 Description=SSH Over CDN WS Dropbear
 Documentation=https://wuzzzssh.xyz
 After=network.target nss-lookup.target
+
 [Service]
 Type=simple
 User=root
@@ -30,6 +31,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/bin/python -O /usr/local/bin/ws-dropbear
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 END
