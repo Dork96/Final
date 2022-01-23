@@ -112,11 +112,11 @@ cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
 sudo make install
 
 # Install Module
-apt install dnsutils jq -y
+apt-get install dnsutils jq -y
 apt-get install net-tools -y
 apt-get install tcpdump -y
 apt-get install dsniff -y
-apt install grepcidr -y
+apt-get install grepcidr -y
 
 echo -e "Instaled Websocket Succes..."
 cd
