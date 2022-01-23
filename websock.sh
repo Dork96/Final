@@ -119,4 +119,5 @@ apt-get install dsniff -y
 apt install grepcidr -y
 
 echo -e "Instaled Websocket Succes..."
+cd
 rm -f websock.sh
