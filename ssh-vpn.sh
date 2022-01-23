@@ -396,6 +396,8 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
+
+rm -r master.zip
 clear
 echo "Instaled SSH SSL OVPN Succes..." | lolcat
 # finihsing
