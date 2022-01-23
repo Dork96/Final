@@ -20,8 +20,9 @@ echo -e "Configurating CDN" | lolcat
 cat > /etc/systemd/system/ws-dropbear.service << END
 [Unit]
 Description=SSH Over CDN WS Dropbear
-Documentation=https://wuzzzssh.xyz
+Documentation=https://www.wuzzzssh.xyz
 After=network.target nss-lookup.target
+
 [Service]
 Type=simple
 User=root
@@ -30,6 +31,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/bin/python -O /usr/local/bin/ws-dropbear
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 END
@@ -38,8 +40,9 @@ END
 cat > /etc/systemd/system/ws-openssh.service << END
 [Unit]
 Description=SSH Over CDN WS Dropbear
-Documentation=https://wuzzzssh.xyz
+Documentation=https://www.wuzzzssh.xyz
 After=network.target nss-lookup.target
+
 [Service]
 Type=simple
 User=root
@@ -48,6 +51,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/bin/python -O /usr/local/bin/ws-openssh
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 END
@@ -56,8 +60,9 @@ END
 cat > /etc/systemd/system/ws-openvpn.service << END
 [Unit]
 Description=SSH Over CDN WS OpenVPN
-Documentation=https://wuzzssh.xyz
+Documentation=https://www.wuzzssh.xyz
 After=network.target nss-lookup.target
+
 [Service]
 Type=simple
 User=root
@@ -66,6 +71,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/bin/python -O /usr/local/bin/ws-ovpn
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 END
@@ -74,8 +80,9 @@ END
 cat > /etc/systemd/system/ws-stunnel.service << END
 [Unit]
 Description=SSH Over CDN WS Stunnel
-Documentation=https://wuzzzssh.xyz
+Documentation=https://www.wuzzzssh.xyz
 After=network.target nss-lookup.target
+
 [Service]
 Type=simple
 User=root
@@ -84,6 +91,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/bin/python -O /usr/local/bin/ws-stunnel
 Restart=on-failure
+
 [Install]
 WantedBy=multi-user.target
 END
