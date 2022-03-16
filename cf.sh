@@ -6,10 +6,10 @@ NC='\e[0m'
 #rm -rf /etc/v2ray
 MYIP=$(wget -qO- https://icanhazip.com);
 apt-get install jq curl -y
-DOMAIN=wuzzzssh.xyz
+DOMAIN=thira.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.wuzzzssh.xyz
-WILDCARD=*.${sub}.wuzzzssh.xyz
+SUB_DOMAIN=${sub}.thira.my.id
+WILDCARD=*.${sub}.thira.my.id
 CF_ID=amingnurfalah@gmail.com
 CF_KEY=9fa80a9b75ba0ff00e5eda15a930425fd0f7d
 set -euo pipefail
