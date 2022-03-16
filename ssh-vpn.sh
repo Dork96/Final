@@ -351,11 +351,11 @@ chmod +x /usr/bin/menu-wr
 
 # should replace this with -i
 cd
-sudo sed 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config > sshd.txt
-mv -f sshd.txt /etc/ssh/sshd_config
-sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config > sshd.txt
-mv -f sshd.txt /etc/ssh/sshd_config
-rm -r sshd.txt
+#sudo sed 's/#\?\(PermitRootLogin\s*\).*$/\1 yes/' /etc/ssh/sshd_config > sshd.txt
+#mv -f sshd.txt /etc/ssh/sshd_config
+#sudo sed 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config > sshd.txt
+#mv -f sshd.txt /etc/ssh/sshd_config
+#rm -r sshd.txt
 
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
